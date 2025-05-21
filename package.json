@@ -1,16 +1,17 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "node seed.js"
+    "dev": "nodemon server.js",
+
+    "start": "node server.js",
+
+
+    "seed": "node seed.js",
+
+    "build": "npm prune --production && npm pack"
   },
-  "keywords": ["express", "auth", "jwt", "mongoose"],
-  "author": "Soltanovskiy Dmitry",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
@@ -18,7 +19,9 @@
     "express": "^5.1.0",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.14.3",
+    "mongoose": "^8.14.3"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.10"
   }
 }
